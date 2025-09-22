@@ -7,21 +7,25 @@ const features = [
     icon: Globe,
     title: "Global Network",
     desc: "Seamless connectivity across major trade routes worldwide.",
+    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
   {
     icon: Briefcase,
     title: "Expertise",
     desc: "Years of experience in handling complex logistics operations.",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZ4wyPZFHNl4l1YIACawaAuPMfLKnAPLKLw&s",
   },
   {
     icon: ShieldCheck,
     title: "Reliability",
     desc: "Trusted partner ensuring safe and timely deliveries.",
+    img: "https://cdn.prod.website-files.com/64fef88ee8b22d3d21b715a2/65853cad9a56f7d446bf0ce1_What%20is%20Data%20Reliability%20Engineering.webp",
   },
   {
     icon: Headphones,
     title: "Customer Support",
     desc: "Dedicated team providing assistance 24/7.",
+    img: "https://d1eipm3vz40hy0.cloudfront.net/images/AMER/gemini-vs-chatgpt-hero-optimized.jpg",
   },
 ];
 
@@ -36,7 +40,7 @@ const cardVariants = {
 
 const WhyChooseUs = () => {
   return (
-    <section id="why" className="py-24 bg-gray-100">
+    <section id="why" className="py-4 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT: Bigger Images */}
         <div className="relative flex justify-center md:justify-start">
@@ -83,7 +87,14 @@ const WhyChooseUs = () => {
                 custom={i}
                 viewport={{ once: false, amount: 0.3 }}
               >
-                <f.icon className="w-9 h-9 text-blue-700 mb-3" />
+                {/* Feature Image */}
+                <img
+                  src={f.img}
+                  alt={f.title}
+                  className="w-full h-32 object-cover rounded-md mb-3"
+                />
+                {/* Icon */}
+                <f.icon className="w-9 h-9 text-blue-700 mb-2" />
                 <h3 className="font-semibold text-lg mb-2 text-gray-800">
                   {f.title}
                 </h3>
