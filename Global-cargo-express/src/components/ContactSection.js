@@ -36,7 +36,7 @@ const ContactSection = () => {
             {
               icon: MapPin,
               title: "Address",
-              text: "123 Global Trade Center, New Delhi, India",
+              text: "Dubai , UAE",
             },
             {
               icon: Mail,
@@ -75,3 +75,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
