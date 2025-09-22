@@ -27,7 +27,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
+    <section id="testimonials" className="py-4 bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
@@ -91,4 +91,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
 
