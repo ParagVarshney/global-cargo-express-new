@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gray-100 overflow-hidden">
+    <section id="about" className="py-4 bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Image */}
@@ -73,4 +73,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
 
