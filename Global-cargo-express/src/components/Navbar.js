@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // for menu icons (install: npm i lucide-react)
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,22 +14,22 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-gray-200 shadow-md fixed top-0 left-0 w-full z-50 h-20">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between ">
+    <header className="bg-gray-200 shadow-md fixed top-0 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-2 ">
+        <a href="/" className="flex items-center space-x-2">
           <img
-            src="/global-cargo-logo.png" // <-- place your logo in public/logo.png
+            src="/global-cargo-logo.png" // Place your logo in public/global-cargo-logo.png
             alt="Global Cargo Express"
-            className="h-20 w-auto pb-5"
+            className="h-12 w-auto"
           />
-          <span className="font-bold text-xl text-blue-600 mb-7">
+          <span className="font-bold text-xl text-blue-600">
             Global Cargo Express
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8 mb-7">
+        <nav className="hidden md:flex space-x-8">
           {navLinks.map((link, i) => (
             <a
               key={i}
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 pb-5"
+          className="md:hidden text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -59,7 +59,7 @@ const Navbar = () => {
                 key={i}
                 href={link.href}
                 className="text-gray-700 hover:text-blue-600 transition"
-                onClick={() => setIsOpen(false)} // closes menu on click
+                onClick={() => setIsOpen(false)} // Close menu on click
               >
                 {link.name}
               </a>
@@ -72,4 +72,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
